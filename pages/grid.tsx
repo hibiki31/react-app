@@ -8,6 +8,8 @@ import {
   Button,
   ActionIcon,
   createStyles,
+  Grid,
+  Container,
   rem,
 } from '@mantine/core';
 
@@ -15,6 +17,7 @@ const useStyles = createStyles((theme) => ({
   card: {
     backgroundColor:
       theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+    margin: '20px',
   },
 
   section: {
@@ -50,36 +53,52 @@ interface BadgeCardProps {
 
 export default function Test() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24`}
-    >
-      <div className="w-96">
-        <BadgeCard
-          image="https://ichigoproduction.com/core_sys/images/main/kv/kv6.jpg"
-          title="ぱっぱ"
-          description="aa"
-          country="aa"
-          badges={[
-            {
-              emoji: '🧚🏻‍♂️',
-              label: 'Yo Say',
-            },
-          ]}
-        ></BadgeCard>
-        <BadgeCard
-          image="https://ichigoproduction.com/core_sys/images/main/kv/kv6.jpg"
-          title="ぱっぱ"
-          description="aa"
-          country="aa"
-          badges={[
-            {
-              emoji: '🧚🏻‍♂️',
-              label: 'Yo Say',
-            },
-          ]}
-        ></BadgeCard>
-      </div>
-    </main>
+    <Container size="lg" px="xs">
+      <Grid>
+        <Grid.Col span={4}>
+          <BadgeCard
+            image="https://ichigoproduction.com/core_sys/images/main/kv/kv6.jpg"
+            title="ぱっぱ"
+            description="aa"
+            country="aa"
+            badges={[
+              {
+                emoji: '🧚🏻‍♂️',
+                label: 'Yo Say',
+              },
+            ]}
+          ></BadgeCard>
+        </Grid.Col>
+        <Grid.Col span={4}>
+          <BadgeCard
+            image="https://frieren-anime.jp/wp-content/themes/frieren_2023/assets/img/top/top/1_visual.jpg"
+            title="ぱっぱ"
+            description="aa"
+            country="aa"
+            badges={[
+              {
+                emoji: '🧚🏻‍♂️',
+                label: 'Yo Say',
+              },
+            ]}
+          ></BadgeCard>
+        </Grid.Col>
+        <Grid.Col span={4}>
+          <BadgeCard
+            image="https://millionlive-anime.idolmaster-official.jp/Is370IbVyq/wp-content/themes/ani-million-v2/assets/home/kv_.jpg"
+            title="ぱっぱ"
+            description="aa"
+            country="aa"
+            badges={[
+              {
+                emoji: '🧚🏻‍♂️',
+                label: 'Yo Say',
+              },
+            ]}
+          ></BadgeCard>
+        </Grid.Col>
+      </Grid>
+    </Container>
   );
 }
 
