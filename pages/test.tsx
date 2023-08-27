@@ -50,16 +50,20 @@ interface BadgeCardProps {
 
 export default function Test() {
   return (
-    <BadgeCard
-      image="aa"
-      title="aa"
-      description="aa"
-      country="aa"
-      badges={{
-        emoji: "a";
-        label: "a";
-      }}
-    ></BadgeCard>
+    <div className="w-100">
+      <BadgeCard
+        image="aa"
+        title="aa"
+        description="aa"
+        country="aa"
+        badges={[
+          {
+            emoji: 'aa',
+            label: 'a',
+          },
+        ]}
+      ></BadgeCard>
+    </div>
   );
 }
 
